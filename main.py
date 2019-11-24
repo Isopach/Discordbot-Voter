@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
-from random import randint
+from random import randint, shuffle
 
 
 # Bot list 
@@ -40,6 +40,7 @@ driver.get(url)
 driver.add_cookie({'name' : 'connect.sid', 'value' : 'YOUR COOKIE VALUE', 'domain' : 'top.gg', 'path': '/' })
 
 for i in range(0,len(id_list)):
+    shuffle(id_list)
     url = "https://top.gg/bot/" + id_list[i] + "/vote"
     driver.get(url)
 
