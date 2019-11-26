@@ -39,8 +39,11 @@ driver.get(url)
 # Set cookie
 driver.add_cookie({'name' : 'connect.sid', 'value' : 'YOUR COOKIE VALUE', 'domain' : 'top.gg', 'path': '/' })
 
+# Randomizes bot list
+shuffle(id_list)
+
 for i in range(0,len(id_list)):
-    shuffle(id_list)
+    
     url = "https://top.gg/bot/" + id_list[i] + "/vote"
     driver.get(url)
 
