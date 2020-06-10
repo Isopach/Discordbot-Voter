@@ -62,6 +62,8 @@ def vote():
    
 if __name__ == '__main__':
     for i in range(1,60):
+        sleep(10)
+        # Sleeps for 10 seconds because of cloudflare browser check
         # 30 days loop
         print("Starting to vote...")
         vote()
