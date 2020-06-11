@@ -54,7 +54,7 @@ def vote():
         driver.execute_script("arguments[0].click();", vote_btn) 
         
         print("Voted!")
-        sleep(randint(3,10))
+        sleep(randint(6,12))
     
     driver.quit()
     
